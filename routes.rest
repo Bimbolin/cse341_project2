@@ -1,0 +1,72 @@
+// LOCALHOST 
+### Get all recipes 
+GET http://localhost:4000/recipes
+
+### Get recipes by id 
+GET http://localhost:4000/recipes/681f87d52e4cd77972d015c4
+
+### Create recipes
+POST http://localhost:4000/recipes HTTP/1.1 
+content-type: application/json
+
+{ 
+  "title": "Updated Recipe",
+  "ingredients": ["Chicken", "Salt"],
+  "instructions": "Cook it well.",
+  "cookTime": 30,
+  "servings": 4,
+  "difficulty": "Medium",
+  "author": "John Doe",
+  "tags": ["dinner", "protein"] 
+}
+
+### PUT recipes 
+PUT http://localhost:4000/recipes/682e348b46199586c0ccfbeb HTTP/1.1 
+content-type: application/json
+
+{ 
+    "title": "Chocolate chips Cookies",
+    "ingredients": [
+      "flour",
+      "butter",
+      "sugar",
+      "brown sugar",
+      "eggs",
+      "vanilla",
+      "chocolate chips"
+    ],
+    "instructions": "Mix ingredients, scoop onto tray, bake at 350°F for 12 minutes.",
+    "cookTime": 25,
+    "servings": 24,
+    "difficulty": "Easy",
+    "author": "Baker Sarah",
+    "tags": [
+      "Dessert",
+      "Cookies",
+      "Chocolate"
+    ]
+} 
+### DELETE recipes 
+DELETE http://localhost:4000/recipes/682f8eec6e9f9e5348777f3a HTTP/1.1
+
+// PRODUCTION Deploy 
+### Get all recipes 
+GET https://cse341-instructor.herokuapp.com/recipes
+
+### Get recipes by id 
+GET https://cse341-instructor.herokuapp.com/recipes/622023f642f9ab4cd6e060b3
+
+### Create recipes 
+POST https://cse341-instructor.herokuapp.com/recipes HTTP/1.1 
+content-type: application/json
+
+{ "firstName":"Ashley", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000" }
+
+### PUT recipes
+PUT https://cse341-instructor.herokuapp.com/recipes/6220bcb39cd507e920c75a0b HTTP/1.1 
+content-type: application/json
+
+{ "firstName":"Sarah", "lastName":"Birch", "email":"sarahB@gmail.com", "favoriteColor":"Yellow", "birthday":"06/12/20" }
+
+### DELETE recipes 
+DELETE https://cse341-instructor.herokuapp.com/recipes/6220e34083149913680f9a64 HTTP/1.1
